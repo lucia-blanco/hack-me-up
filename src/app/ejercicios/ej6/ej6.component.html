@@ -1,0 +1,49 @@
+<h1>Ejercicio 6</h1>
+<table>
+  <thead>
+    <tr>
+      <th>
+        <label>Imagen (URL)</label>
+      </th>
+      <th>
+        <label>Precio Unitario</label>
+      </th>
+      <th>
+        <label>Cantidad</label>
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <input type="text" [ngModel]="img" name="img">
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="precio" name="precio">
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="cantidad" name="cantidad">
+      </td>
+      <td>
+        <button (click)="push()">Añadir linea</button>
+      </td>
+    </tr>
+    <tr *ngFor="let linea of factura">
+      <td>
+        <img *ngIf="linea.img" [src]="linea.img" height="50px">
+      </td>
+      <td>€{{ linea.precio }}</td>
+      <td>{{ linea.cantidad }}</td>
+      <td>€{{ linea.total }}</td>
+    </tr>
+    <tr style="font-weight:bold;">
+      <td>TOTAL</td>
+      <td></td>
+      <td></td>
+      <td>€{{ totals }}</td>
+    </tr>
+  </tbody>
+</table>
+<hr>

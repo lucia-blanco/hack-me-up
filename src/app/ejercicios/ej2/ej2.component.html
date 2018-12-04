@@ -1,0 +1,9 @@
+<h1>Ejercicio 2</h1>
+<p>Intervalo para el número Aleatorio</p>
+<label>Mínimo</label>
+<input type="number" [(ngModel)]="minimo" name="minimo" (ngModelChange)="validate($event)">
+<label>Máximo</label>
+<input type="number" [(ngModel)]="maximo" name="maximo" (ngModelChange)="validate($event)">
+<button (click)="reset()">Reset</button>
+<button [disabled]="!valid" (click)="aleatorio()">Aleatorio entre {{minimo}} y {{maximo}}</button>
+<h2>{{ num }}</h2>

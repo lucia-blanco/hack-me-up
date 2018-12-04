@@ -1,0 +1,8 @@
+<h1>Ejercicio 7</h1>
+<table>
+  <tr *ngFor="let fila of filas; let i = index">
+    <td *ngFor="let columna of columnas; let j = index" class=casilla (click)="tirarFicha(i,j)">
+      <span class="ficha"></span>
+    </td>
+  </tr>
+</table>

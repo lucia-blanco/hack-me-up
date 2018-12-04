@@ -1,0 +1,23 @@
+<h1>Ejercicio 4</h1>
+<table *ngIf="peliculas != undefined">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Lanzamiento</th>
+      <th>Puntuación</th>
+      <th>Título</th>
+      <th>Sinopsis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let peli of peliculas; let index = index">
+      <td>
+        <img [src]="peli.cover" height="100px">
+      </td>
+      <td>{{ peli.release }}</td>
+      <td>{{ peli.score }}</td>
+      <td>{{ peli.title }}</td>
+      <td>{{ peli.synopsis }}</td>
+    </tr>
+  </tbody>
+</table>

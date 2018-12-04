@@ -1,0 +1,9 @@
+<h1>Ejercicio 3</h1>
+<label>URL de la pirámide</label>
+<input type="text" [(ngModel)]="url" name="url"><br>
+<label>Filas de la pirámide: </label>
+<input type="range" [(ngModel)]="nfilas" name="nfilas" min="1" max="20">
+
+<div style="text-align: center" *ngFor="let filas of numberToArray(nfilas); let i = index">
+  <img [src]="url" height="35px" *ngFor="let col of numberToArray(i + 1)">
+</div>
